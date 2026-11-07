@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Dream</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<style>
+    
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    body {
+    font-family: "Poppins", sans-serif;
+   
+    
+}
+    header{
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        }
+
+    .overlay {
+    
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    
+   
+}
+
+.bg{
+    height: 100%;
+    width: 100%;
+    background-image: url(images/header-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 0px;
+    position: fixed;
+    z-index: -1;
+    
+    }
+
+.color{
+    color: rgb(48, 47, 47);
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+    
+    
+nav{
+        width: 100%;
+        height: 70px;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        background-color: rgb(36, 35, 35);
+         z-index: 2;
+        
+      }
+      .ul{
+        margin-top: 130px;
+        display: flex;
+        gap: 15px;
+        margin-right: 50px;
+      }
+
+    
+    nav a{
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+        
+        
+        
+    }
+    nav img{
+        margin-left: 50px;
+    }
+   
+    .text{
+        position: absolute;
+        top: 200px;
+        left: 200px;
+        color: white;
+        
+    }
+    .text a{
+        text-decoration: none;
+        color: white;
+        background-color: rgb(245, 183, 11);
+        display: flex;
+        margin-left: 430px;
+        margin-top: 50px;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid;
+        font-weight: bold;
+        width: 160px;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+}
+.text span{
+    margin-left: 220px;
+}
+.text h3{
+    margin-top: 20px;
+    margin-left: 250px;
+    font-size: 50px;
+    
+}
+.text P{
+margin-top: 15px;
+margin-left: 250px;
+}
+
+
+
+.container{
+    background-color: white;
+    margin-top: 30px;
+
+}
+body::selection{
+    background-color: rgb(255, 208, 0);
+    color: black;
+    
+}
+
+
+
+
+
+
+.banners{
+    display: flex;
+    margin-top: -30px;
+}
+.banner{
+margin-left: 80px;
+margin-top: 50px;
+ width: 420px;
+ height: 300px;
+ padding: 30px;
+}  
+.banner h4{
+    margin-top: 15px;
+    font-size: 18px;
+    color: rgb(36, 35, 35);
+}
+.banner p{
+    margin-top: 15px;
+    font-size: 15px;
+    color: rgb(141, 141, 141);
+}
+
+h2{
+    margin-top: 160px;
+    font-size: 35px;
+    text-align: center;
+}
+#p{
+    text-align: center;
+    margin-top: 8px;
+    color: rgb(63, 63, 63);
+}
+.cards{
+    display: flex;
+    margin-top: 90px;
+    margin-left: 120px;
+    gap: 40px;
+    
+
+}
+.card{
+    width: 350px;
+    height: 340px;
+    padding: 20px;
+}
+.card h4{
+    margin-top: 12px;
+    font-size: 18px;
+
+}
+.card p{
+    margin-top: 13px;
+    color: rgb(53, 53, 53);
+    font-size: 15px;
+}
+.card img{
+    width: 100%;
+}
+.cards a{
+    text-decoration: none;
+    color: black;
+}
+.card:hover{
+    transform: scale(2.5s);
+    background-color: orange;
+    
+}
+.card:hover p{
+    color: black;
+
+}
+.imgs{
+    display: flex;
+    margin-left: 20px;
+    margin-top: 50px;
+    gap:50px;
+    
+}
+.img{
+    
+   position: relative;
+    width: 290px;
+    height: 520px;
+    overflow: hidden;
+    
+    
+    
+    
+}
+.img img{
+    width:100%; 
+    height:100%;
+     object-fit: cover;
+    
+    
+}
+.content{
+    padding: 15px;
+    position: absolute;
+    inset: 0;
+    background-color: rgb(223, 179, 38);
+    
+    transform: translateY(100%);
+    transition: 0.7s ease;
+}
+.img h3{
+    font-size: 42px;
+    
+    
+}
+.img p{
+    margin-top: 30px;
+    font-size: 15px;
+  
+}
+.img:hover .content{
+    transform: translateY(0);
+   
+}
+.banner2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    background-color: rgb(255, 174, 0);
+    width: 100%;
+    height: 300px;
+    margin-top: 150px;
+}
+.banner2 h5{
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(29, 28, 28);
+}
+.banner2::selection{
+    color: white;
+    background-color: rgb(255, 174, 0);
+}
+#h6{
+text-align: center;
+font-size: 35px;
+margin-top: 150px;
+}
+#p6{
+ text-align: center;
+ margin-top: 40px;
+ color: rgb(44, 44, 44);
+ font-size: 15px;
+}
+.recommendation {
+    display: flex;
+    gap: 60px;
+    margin-top: 80px;
+    justify-content: center;
+}
+.carda{
+    width: 330px;
+    height: 200px;
+    padding: 20px;
+    display: flex;
+    display: inline-block;
+    box-shadow:0px 0px 19px 7px rgba(0, 0, 0, .2);
+    border-radius: 8px;
+
+
+}
+
+    
+
+.recommendation2{
+    display: flex;
+    gap: 50px;
+    margin-top: 80px;
+    justify-content: center;
+}
+h6{
+    font-size: 20px;
+    margin-top: 10px;
+    
+    
+}
+#icon{
+    display:flex;
+    margin-left: -20px;
+    padding: 20px;
+    
+}
+#s{
+    margin-top: 15px;
+    font-size: 14px;
+    color: rgb(80, 79, 79);
+}
+
+.section2{
+    margin-top: 100px;
+    width: 100%;
+    height: 700px;
+    background-color: rgb(37, 37, 37);
+    text-align: center;
+    color: white;
+}
+.section2 h6{
+    font-size: 40px;
+    margin-top: 25px;
+    
+}
+.cards1{
+    
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    gap: 30px;
+}
+.cardaa{
+    padding: 40px;
+    text-align: start;
+    width: 530px;
+    height: 250px;
+    border: 1px solid;
+    background-color: white;
+    color: rgb(95, 94, 94);
+}
+.cardaa p{
+    font-size: 14px;
+    
+}
+#p1{
+    color: rgb(255, 196, 0);
+    font-size: 14px;
+}
+#p2{
+    margin-top: 25px;
+}
+#cp{
+    margin-top: 55px;
+    color: black;
+    font-weight: bold;
+
+}
+#pp{
+    margin-top: 10px;
+    font-size: 13px;
+}
+.buttons{
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    gap: 10px;
+}
+.btn1{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    align-content: center;
+    
+}
+.btn1 a{
+    text-decoration: none;
+    color: black;
+    
+}
+.section3{
+    text-align: center;
+    margin-top: 200px;
+    
+}
+.section3 p{
+    color: rgb(27, 27, 27);
+    font-size: 14px;
+    margin-top: 25px;
+}
+#sp{
+    color: rgb(141, 127, 0);
+    font-weight: bold;
+}
+.section3 h6{
+    margin-top: 25px;
+    font-size: 40px;
+    color: rgb(31, 31, 31);
+}
+.ne{
+    display: flex;
+    margin-left: 300px;
+    margin-top: 50px;
+    gap: 350px;
+}
+.nei{
+    display: flex;
+    margin-left: 300px;
+    margin-top: 20px;
+    gap: 55px;
+
+}
+.nei input{
+    width: 330px;
+    height: 50px;
+    border: none;
+    border: 1px solid rgb(167, 166, 166);
+    
+}
+#s3{
+    margin-right: 700px;
+    margin-top: 35px;
+}
+#si{
+    margin-top: 20px;
+    margin-right: 35px;
+    width: 715px;
+    height: 50px;
+    border: none;
+    border: 1px solid rgb(158, 158, 158);
+
+    
+}
+#d3{
+    margin-right: 590px;
+    margin-top: 40px;
+}
+#di{
+    margin-top: 20px;
+    margin-right: 35px;
+    width: 715px;
+    height: 200px;
+    border: none;
+    border: 1px solid rgb(146, 145, 145);
+}
+.section3 a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    width: 145px;
+    height: 50px;
+    background-color: rgb(252, 185, 1);
+    border-radius: 23px;
+    margin-left: 300px;
+    margin-top: 30px;
+    align-content: center;
+}
+#p3{
+    margin-right: 230px;
+    font-size: 13px;
+    color: rgb(102, 102, 102);
+}
+footer{
+    width: 100%;
+    height: 380px;
+    margin-top: 150px;
+    color: white;
+    background-color: rgb(41, 41, 41);
+}
+.divs{
+    display: flex;
+    gap: 130px;
+    margin-left: 100px;
+   
+}
+.div1{
+    width: 360px;
+    margin-top: 90px;
+}
+.div2{
+    width: 150px;
+     margin-top: 90px;
+}
+.div3{
+    width: 200px;
+     margin-top: 90px;
+}
+footer a{
+    text-decoration: none;
+    color: silver;
+    font-size: 13px;
+}
+footer h6{
+    font-size: 20px;
+}
+.pl{
+    display: flex;
+    gap: 800px;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+footer a:hover{
+    color: yellow;
+}
+#pl{
+    color: silver;
+    font-size: 13px;
+}
+
+.src{
+    border: 1px solid;
+    background-color: rgb(22, 22, 22);
+    width: 120px;
+    height: 110px;
+    margin-top: 20px;
+    transform: translate(100%);
+}
+.src ul{
+margin-top: 15px;
+}
+#svc{
+    overflow: hidden;
+}
+.src ul:hover{
+    
+    background-color: yellow;
+    color: rgb(0, 0, 0);
+}
+#svc:hover .src{
+    transform: translate(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+<body>
+    <header>
+
+        <div class="overlay"></div>
+        <nav>
+        <img src="images/logo.png" alt="">
+<div class="ul">
+        <a href="">HOME</a>
+        <a href="">FEATURE</a>
+        <a href="">PROJECT</a>
+        
+        <a href="" id="svc">SERVICES>
+            <div class="src">
+            <ul>Career</ul>
+            <ul>Redeem points</ul>
+            <ul>Webs</ul>
+            </div>
+        </a>
+        <a href="">BLOG</a>
+        <a href="">PAGES</a>
+</div>
+    
+    </nav>
+    <div class="color"></div>
+        <div class="bg"></div>
+        
+    
+
+    <div class="text">
+        
+        <span>Discover the Colorful World</span>
+        <h3>BUILD YOUR DREAM</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp <br>
+or incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+    <a href="">DISCOVER NOW</a>
+    </div>
+    </header>
+    <div class="container">
+        <div class="banners">
+        <div class="banner">
+            <img src="images/f1.png" alt="">
+            <h4>Building Drawings</h4>
+            <p>Lorem ipsum dolor sit amet, consecteturadipis icing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="banner">
+            <img src="images/f2.png" alt="">
+            <h4>Building Drawings</h4>
+            <p>Lorem ipsum dolor sit amet, consecteturadipis icing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="banner">
+            <img src="images/f3.png" alt="">
+            <h4>Building Drawings</h4>
+            <p>Lorem ipsum dolor sit amet, consecteturadipis icing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </div>
+    <h2>Some Features that Made us Unique</h2>
+    <p id="p">Who are in extremely love with eco friendly system.</p>
+
+<div class="cards">
+    <div class="card">
+        <a href="">
+        <img src="images/s1.png" alt="">
+        <h4>Basic and Common Repairs</h4>
+        <p>Computer users and programmers have become so accustomed to using Windows, even for the changing capabilities and the appearances of the graphical.</p>
+        </a>
+    </div>
+    <div class="card">
+        <a href="">
+        <img src="images/s2.png" alt="">
+        <h4>Basic Repairs & Service</h4>
+        <p>Computer users and programmers have become so accustomed to using Windows, even for the changing capabilities and the appearances of the graphical.</p>
+        </a>
+    </div>
+    <div class="card">
+        <a href="">
+        <img src="images/s3.png" alt="">
+        <h4>Preventive Maintanance</h4>
+        <p>Computer users and programmers have become so accustomed to using Windows, even for the changing capabilities and the appearances of the graphical.</p>
+        </a>
+    </div>
+
+</div>
+<h2>Why Choose Us Your Fitness Builder</h2>
+<p id="p">Who are in extremely love with eco friendly system.</p>
+
+
+<div class="imgs">
+
+<div class="img">
+    <img src="images/p1.jpg" alt="">
+    <div class="content">
+    <h3>Alex <br> Complex for esidence</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum nulla hic, voluptates architecto similique rerum doloremque aut harum cumque et itaque quasi omnis soluta eum a alias fugit pariatur? Aut quo, ipsam illum tempora impedit, explicabo harum, officia recusandae amet qui cumque quasi dolorum autem? Omnis impedit fugiat delectus perferendis nihil? Ab rerum nihil modi quod itaque quas? Explicabo mollitia, vel tempora vitae quasi consectetur tenetur quam nam quos nemo delectus! Quae odit alias, illum repellendus aliquid  tenetur quam nam quos nemo delectus! Quae odit alias, illum repellendus aliquid</p>
+</div>
+</div>
+<div class="img">
+    <img src="images/p2.jpg" alt="">
+    <div class="content">
+    <h3>Alex <br>Complex for esidence</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum nulla hic, voluptates architecto similique rerum doloremque aut harum cumque et itaque quasi omnis soluta eum a alias fugit pariatur? Aut quo, ipsam illum tempora impedit, explicabo harum, officia recusandae amet qui cumque quasi dolorum autem? Omnis impedit fugiat delectus perferendis nihil? Ab rerum nihil modi quod itaque quas? Explicabo mollitia, vel tempora vitae quasi consectetur tenetur quam nam quos nemo delectus! Quae odit alias, illum repellendus aliquid  tenetur quam nam quos nemo delectus! Quae odit alias, illum repellendus aliquid</p>
+</div>
+</div>
+<div class="img">
+    <img src="images/p3.jpg" alt="">
+    <div class="content">
+    <h3>Alex <br>Complex for esidence</h3>
+    <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum nulla hic, voluptates architecto similique rerum doloremque aut harum cumque et itaque quasi omnis soluta eum a alias fugit pariatur? Aut quo, ipsam illum tempora impedit, explicabo harum, officia recusandae amet qui cumque quasi dolorum autem? Omnis impedit fugiat delectus perferendis nihil? Ab rerum nihil modi quod itaque quas? Explicabo mollitia, vel tempora vitae quasi consectetur tenetur quam nam quos nemo delectus! Quae odit alias, illum repellendus aliquid  tenetur quam nam quos nemo delectus! Quae odit alias, illum repellendus aliquid</p>
+    </div>
+</div>
+<div class="img">
+    <img src="images/p4.jpg" alt="">
+    <div class="content">
+    <h3>Alex <br> Complex for esidence</h3>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda nostrum at sunt, ut error delectus tempora officiis quo, incidunt ullam quasi vero saepe nobis quas excepturi impedit, quam vel officia? Tempore repudiandae ratione deleniti placeat facilis recusandae explicabo, dolorum natus aspernatur? Iusto provident mollitia modi deserunt et quas omnis! Dolorem nisi nesciunt voluptas a possimus id veritatis, aperiam sequi nihil at illum laborum minima ut dolore unde alias atque quia architecto facere cupiditate odio voluptatum  tenetur quam nam quos nemo delectus! Quae odit alias, illum repellendus aliquid</p>
+    </div>
+</div>
+
+
+</div>
+<div class="banner2">
+    <div class="a">
+        <h5>2536</h5>
+        <p>Projects Completed</p>
+
+    </div>
+      <div class="a">
+        <h5>6784</h5>
+        <p>Really Happy Clients</p>
+
+    </div>
+      <div class="a">
+        <h5>1059</h5>
+        <p>Total Tasks Completed</p>
+
+    </div>
+      <div class="a">
+        <h5>2239</h5>
+        <p>Cups of Coffee Taken</p>
+
+    </div>
+      <div class="a">
+        <h5>434</h5>
+        <p>In House Professionals</p>
+
+    </div>
+</div>
+<h6 id="h6">Why we are the best</h6>
+<p id="p6">Who are in extremely love with eco friendly system.</p>
+<div class="recommendation">
+    <div class="carda">
+     <p id="icon"><i class="fa-regular fa-user fa-lg" style="color: rgb(0, 0, 0);"></i></p>
+        <h6>Expert Technicians</h6>
+        <p id="s">Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+    </div>
+     <div class="carda">
+        <p id="icon"><i class="fa-regular fa-address-card fa-lg" style="color: rgb(0, 0, 0);"></i></p>
+        
+        <h6>Professional Service</h6>
+        <p id="s">Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+    </div>
+     <div class="carda">
+  
+        <p id="icon"><i class="fa-solid fa-tty fa-lg" style="color: rgb(0, 0, 0);"></i></p>
+        <h6>Great Support</h6>
+        <p id="s">Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+    </div>
+</div>
+<div class="recommendation2">
+     <div class="carda">
+        <p id="icon"><i class="fa-regular fa-address-card fa-lg" style="color: rgb(0, 0, 0);"></i></p>
+        <h6>Technical Skills</h6>
+        <p id="s">Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+    </div>
+     <div class="carda">
+        <p id="icon"><i class="fa-solid fa-rocket fa-lg" style="color: rgb(0, 0, 0);"></i></p>
+        <h6>Highly Recomended</h6>
+        <p id="s">Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+    </div>
+     <div class="carda">
+        <p id="icon"><i class="fa-regular fa-user fa-lg" style="color: rgb(0, 0, 0);"></i></p>
+        <h6>Positive Reviews</h6>
+        <p id="s">Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+    </div>
+</div>
+
+<div class="section2">
+    
+    
+    <br><br><br><br><br><br>
+    <p id="p1">Customer stories</p>
+    
+    <h6>What our clients say</h6>
+    
+    <p id="p2">Clear communication and care in the details make all the difference.</p>
+    
+    
+    <div class="cards1">
+         
+        <div class="cardaa"><p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolores vel quis eveniet, 
+        laboriosam est in quia facere porro? Iste doloremque quas minima autem enim sint pariatur dolores cupiditate laborum, 
+        quia porro rerum quibusdam animi"</p> 
+     <p id="cp">Avery Collins</p>
+     <p id="pp">Homeowner . Westmere</p>
+
+    </div>
+
+    <div class="cardaa">
+        <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolores vel quis eveniet, 
+        laboriosam est in quia facere porro? Iste doloremque quas minima autem enim sint pariatur dolores cupiditate laborum, 
+        quia porro rerum quibusdam animi"</p> 
+     <p id="cp">Ellis Morgan</p>
+     <p id="pp">Workspace client . Alderfield</p>
+
+    </div>
+</div>
+<div class="buttons">
+    <div class="btn1"><a href=""><</a></div>
+    <div class="btn1"><a href="">></a></div>
+</div>
+</div>
+<div class="section3">
+    <p id="sp">Start with a conversation</p>
+    <h6>If you need, just drop us a line</h6>
+    <div class="form">
+        <div class="ne">
+        <p id="n3">Name</p> <p id="n3">Email</p>
+        </div>
+        <div class="nei">
+        <input type="text" id="ni"> <input type="email" id="ni">
+        </div>
+
+
+        <p id="s3">Subject</p><input type="text" name="Project enquiry" id="si">
+        <p id="d3">Tell us about your project</p><input type="text" id="di"> 
+        
+        <a href="">Send enquiry</a>
+        
+    </div>
+    <p id="p3">This demonstration needs a configured mail service before messages can be delivered.</p>
+</div>
+<footer>
+    <div class="divs">
+    <div class="div1">
+        <h6>Construction</h6>
+        <br><br>
+        <p id="pl">Good buildings begin with good conversations. Explore a considered approach to planning, making and caring for spaces.</p>
+    </div>
+    <div class="div2">
+        <h6>Explore</h6>
+        <br>
+        <a href="">Our services</a>
+        <br><br>
+        <a href="">Selected projects</a><br><br>
+        <a href="">How we work</a>
+    </div>
+    <div class="div3">
+        <h6>Plan your project</h6>
+        <br>
+        <a href="">Create a brief</a><br><br>
+        <a href="">Before you build</a><br><br>
+        <a href="">Make an enquiry</a><br><br>
+    </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="pl">
+    <p id="pl">© 2026 Construction. Template by Colorlib.</p>
+    <p id="pl">Documentation</p>
+</div>
+</footer>
+
+
+    </div>
+</body>
+</html>
